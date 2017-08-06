@@ -31,7 +31,7 @@ module.exports = function (app) {
 			var totalDifference = 0;
 
 			for(var i = 0; i < oldFriend.scores.length; i++) {
-				var differenceOneScore = Math.floor(oldFriend.scores[k] - addFriend.scores[k]);
+				var differenceOneScore = Math.floor(oldFriend.scores[i] - addFriend.scores[i]);
 				totalDifference += differenceOneScore;
 			}
 
@@ -48,7 +48,7 @@ module.exports = function (app) {
 			}
 		}
 //add the new friend
-		friendData.push(addFriend);
+		dataFriend.push(addFriend);
 
 		res.json(dataFriend[bestFriendDefault]);
 	})
